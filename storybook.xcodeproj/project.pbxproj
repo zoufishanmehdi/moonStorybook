@@ -25,6 +25,8 @@
 		5245FA1B1CCC58260082B0E2 /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5245FA121CCC46F20082B0E2 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5245FA1C1CCC58390082B0E2 /* HTTPStatusCodes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5245FA0E1CCC46C70082B0E2 /* HTTPStatusCodes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5245FA1D1CCC58400082B0E2 /* WatsonDeveloperCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5245FA141CCC471E0082B0E2 /* WatsonDeveloperCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5245FA1F1CCCFB2D0082B0E2 /* storybookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245FA1E1CCCFB2D0082B0E2 /* storybookVC.swift */; };
+		5245FA211CCCFC6D0082B0E2 /* playStorybookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245FA201CCCFC6D0082B0E2 /* playStorybookVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +62,8 @@
 		5245FA101CCC46D90082B0E2 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = "<group>"; };
 		5245FA121CCC46F20082B0E2 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Starscream.framework; sourceTree = "<group>"; };
 		5245FA141CCC471E0082B0E2 /* WatsonDeveloperCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WatsonDeveloperCloud.framework; sourceTree = "<group>"; };
+		5245FA1E1CCCFB2D0082B0E2 /* storybookVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storybookVC.swift; sourceTree = "<group>"; };
+		5245FA201CCCFC6D0082B0E2 /* playStorybookVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playStorybookVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				5245F9F71CCC367E0082B0E2 /* AppDelegate.swift */,
 				5245FA091CCC426F0082B0E2 /* Frameworks */,
 				5245F9F91CCC367E0082B0E2 /* ViewController.swift */,
+				5245FA1E1CCCFB2D0082B0E2 /* storybookVC.swift */,
+				5245FA201CCCFC6D0082B0E2 /* playStorybookVC.swift */,
 				5245F9FB1CCC367E0082B0E2 /* Main.storyboard */,
 				5245F9FE1CCC367E0082B0E2 /* Assets.xcassets */,
 				5245FA001CCC367E0082B0E2 /* LaunchScreen.storyboard */,
@@ -195,8 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5245FA1F1CCCFB2D0082B0E2 /* storybookVC.swift in Sources */,
 				5245F9FA1CCC367E0082B0E2 /* ViewController.swift in Sources */,
 				5245F9F81CCC367E0082B0E2 /* AppDelegate.swift in Sources */,
+				5245FA211CCCFC6D0082B0E2 /* playStorybookVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
