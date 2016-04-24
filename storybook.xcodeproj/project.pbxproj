@@ -27,6 +27,7 @@
 		5245FA1D1CCC58400082B0E2 /* WatsonDeveloperCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5245FA141CCC471E0082B0E2 /* WatsonDeveloperCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5245FA1F1CCCFB2D0082B0E2 /* storybookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245FA1E1CCCFB2D0082B0E2 /* storybookVC.swift */; };
 		5245FA211CCCFC6D0082B0E2 /* playStorybookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245FA201CCCFC6D0082B0E2 /* playStorybookVC.swift */; };
+		8106AE0E1CCD08410027CEA9 /* SwiftRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106AE0D1CCD08410027CEA9 /* SwiftRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +65,7 @@
 		5245FA141CCC471E0082B0E2 /* WatsonDeveloperCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WatsonDeveloperCloud.framework; sourceTree = "<group>"; };
 		5245FA1E1CCCFB2D0082B0E2 /* storybookVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storybookVC.swift; sourceTree = "<group>"; };
 		5245FA201CCCFC6D0082B0E2 /* playStorybookVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playStorybookVC.swift; sourceTree = "<group>"; };
+		8106AE0D1CCD08410027CEA9 /* SwiftRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				5245F9F91CCC367E0082B0E2 /* ViewController.swift */,
 				5245FA1E1CCCFB2D0082B0E2 /* storybookVC.swift */,
 				5245FA201CCCFC6D0082B0E2 /* playStorybookVC.swift */,
+				8106AE0D1CCD08410027CEA9 /* SwiftRequest.swift */,
 				5245F9FB1CCC367E0082B0E2 /* Main.storyboard */,
 				5245F9FE1CCC367E0082B0E2 /* Assets.xcassets */,
 				5245FA001CCC367E0082B0E2 /* LaunchScreen.storyboard */,
@@ -205,6 +208,7 @@
 				5245F9FA1CCC367E0082B0E2 /* ViewController.swift in Sources */,
 				5245F9F81CCC367E0082B0E2 /* AppDelegate.swift in Sources */,
 				5245FA211CCCFC6D0082B0E2 /* playStorybookVC.swift in Sources */,
+				8106AE0E1CCD08410027CEA9 /* SwiftRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +328,7 @@
 					"$(PROJECT_DIR)/storybook",
 				);
 				INFOPLIST_FILE = storybook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = C4Q.storybook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,6 +344,7 @@
 					"$(PROJECT_DIR)/storybook",
 				);
 				INFOPLIST_FILE = storybook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = C4Q.storybook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -364,6 +370,7 @@
 				5245FA081CCC367E0082B0E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

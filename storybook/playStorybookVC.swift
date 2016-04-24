@@ -12,7 +12,16 @@ import AVFoundation
 
 class playStorybookVC: UIViewController {
     var player: AVAudioPlayer?
+    var pickedStorybookTitle = String()
     var pickedStorybook = String()
+    var parentPhonenumber = "9174034445"
+    
+    var timeAudioPlayed = player.currentTime / player.duration
+    var progress = float(timeAudioPlayed)
+    
+    var textToPops = [String]
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +64,36 @@ class playStorybookVC: UIViewController {
     
     }
 
+
+    @IBAction func stopStorybookTapped(sender: AnyObject) {
+        self.player!.stop()
+        sendPopsSMS()
+    }
+    
+    func sendPopsSMS () {
+        textToPops.append(pickedStorybookTitle)
+        textToPops.append(progress)
+        let code = arc4random_uniform(8999) + 1000
+        var swiftRequest = SwiftRequest()
+        
+        var data = [
+            "To" : parentPhonenumber as String,
+            "From" : "+18622256795",
+            "Body" : textToPops as String
+        ]
+        swiftRequest.post("https://api.twilio.com/2010-04-01/Accounts/ACae8bf0bfc39454dd5f1621df862edb9c/Messages",
+            auth: ["username" : "ACae8bf0bfc39454dd5f1621df862edb9c", "password" : "5931adb0f5d66f7dd2bb08af2642442a"],
+            data: data,
+            callback: {err, response, body in
+                if err == nil {
+                    print("Success: \(response)")
+                } else {
+                    print("Error: (err)")
+                }
+        })
+        
+        
+    }
 
     /*
     // MARK: - Navigation

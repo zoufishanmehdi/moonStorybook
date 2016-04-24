@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Apd-6u-w0A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Apd-6u-w0A">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,41 +19,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57u-dl-X9Q">
-                                <rect key="frame" x="58" y="183" width="201" height="233"/>
-                                <color key="backgroundColor" red="0.43803745332791999" green="0.73816665308162333" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rv5-UU-ylE" userLabel="Vertical Stack View">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5e-jj-Yfk" userLabel="Horizontal Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="193"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYa-Nn-yQz">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="193"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsa-bR-Egk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="193"/>
+                                                        <state key="normal" image="Goodnightmoon"/>
+                                                        <connections>
+                                                            <action selector="firstStorybookTapped:" destination="Apd-6u-w0A" eventType="touchUpInside" id="rck-c0-7Pw"/>
+                                                            <action selector="secondStorybookTapped:" destination="Apd-6u-w0A" eventType="touchUpInside" id="5Jv-U5-4AG"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVT-KG-1Ov">
+                                                <rect key="frame" x="200" y="0.0" width="200" height="193"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHO-CZ-DAs">
+                                                <rect key="frame" x="400" y="0.0" width="200" height="193"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yc3-BN-Y11">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="193"/>
+                                                        <state key="normal" image="MoonGoddess"/>
+                                                        <connections>
+                                                            <action selector="secondStorybookTapped:" destination="Apd-6u-w0A" eventType="touchUpInside" id="AC7-o3-io6"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nVT-KG-1Ov" firstAttribute="width" secondItem="CYa-Nn-yQz" secondAttribute="width" id="O6M-BT-265"/>
+                                            <constraint firstItem="dHO-CZ-DAs" firstAttribute="width" secondItem="nVT-KG-1Ov" secondAttribute="width" id="WY4-Ij-Wr3"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JR1-QH-UxY" userLabel="Horizontal Stack View">
+                                        <rect key="frame" x="0.0" y="193" width="600" height="194"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCr-ZY-Kc7" userLabel="Horizontal Stack View">
+                                        <rect key="frame" x="0.0" y="387" width="600" height="193"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fr-Yt-wVJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="193"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H9-bg-1Kg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="193"/>
+                                                        <state key="normal" image="MoonRhymes"/>
+                                                        <connections>
+                                                            <action selector="thirdStorybookTapped:" destination="Apd-6u-w0A" eventType="touchUpInside" id="hii-sc-18d"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5M-jH-Raa">
+                                                <rect key="frame" x="200" y="0.0" width="200" height="193"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21C-vz-Zhk">
+                                                <rect key="frame" x="400" y="0.0" width="200" height="193"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H85-p5-9Hf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="193"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" image="BigBlueMarble"/>
+                                                        <connections>
+                                                            <action selector="fourthStorybookTapped:" destination="Apd-6u-w0A" eventType="touchUpInside" id="7Vz-05-T4v"/>
+                                                            <action selector="secondStorybookTapped:" destination="Apd-6u-w0A" eventType="touchUpInside" id="X4b-A3-Y5E"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="21C-vz-Zhk" firstAttribute="width" secondItem="a5M-jH-Raa" secondAttribute="width" id="4QP-B4-g53"/>
+                                            <constraint firstItem="a5M-jH-Raa" firstAttribute="width" secondItem="3fr-Yt-wVJ" secondAttribute="width" id="wao-HP-7n5"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="201" id="0lf-bK-KP5"/>
-                                    <constraint firstAttribute="height" constant="233" id="98u-a3-irH"/>
+                                    <constraint firstItem="tCr-ZY-Kc7" firstAttribute="height" secondItem="JR1-QH-UxY" secondAttribute="height" id="Klq-UM-lca"/>
+                                    <constraint firstItem="JR1-QH-UxY" firstAttribute="height" secondItem="J5e-jj-Yfk" secondAttribute="height" id="L2z-eZ-PTK"/>
+                                    <constraint firstItem="J5e-jj-Yfk" firstAttribute="height" secondItem="tCr-ZY-Kc7" secondAttribute="height" id="XpE-yb-ffc"/>
+                                    <constraint firstItem="J5e-jj-Yfk" firstAttribute="width" secondItem="tCr-ZY-Kc7" secondAttribute="height" multiplier="60:11" id="x1t-9o-jhj"/>
                                 </constraints>
-                                <connections>
-                                    <action selector="firstStorybookTapped:" destination="Apd-6u-w0A" eventType="touchUpInside" id="vu3-uB-E0e"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiI-bd-mj1">
-                                <rect key="frame" x="339" y="183.5" width="201" height="233"/>
-                                <color key="backgroundColor" red="1" green="0.25673372102950043" blue="0.3290157915791907" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="233" id="6pq-KJ-l3G"/>
-                                    <constraint firstAttribute="width" constant="201" id="fQL-y0-phW"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="secondStorybookTapped:" destination="Apd-6u-w0A" eventType="touchUpInside" id="MOk-h6-f6s"/>
-                                </connections>
-                            </button>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XpE-yb-ffc"/>
+                                        <exclude reference="x1t-9o-jhj"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="57u-dl-X9Q" firstAttribute="centerY" secondItem="bIM-sT-1jH" secondAttribute="centerY" id="HM4-Ib-I0H"/>
-                            <constraint firstItem="57u-dl-X9Q" firstAttribute="leading" secondItem="bIM-sT-1jH" secondAttribute="leading" constant="58" id="pTe-d1-S8u"/>
-                            <constraint firstItem="fiI-bd-mj1" firstAttribute="centerY" secondItem="bIM-sT-1jH" secondAttribute="centerY" id="wm6-iV-HDZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fiI-bd-mj1" secondAttribute="trailing" constant="40" id="yJ4-4X-fjJ"/>
+                            <constraint firstItem="OdQ-GN-ozT" firstAttribute="top" secondItem="Rv5-UU-ylE" secondAttribute="bottom" id="BLv-e5-LZR"/>
+                            <constraint firstItem="Rv5-UU-ylE" firstAttribute="leading" secondItem="bIM-sT-1jH" secondAttribute="leading" id="MUd-zc-YPg"/>
+                            <constraint firstAttribute="trailing" secondItem="Rv5-UU-ylE" secondAttribute="trailing" id="jM7-N3-n7l"/>
+                            <constraint firstItem="Rv5-UU-ylE" firstAttribute="top" secondItem="Lzb-zP-iQC" secondAttribute="bottom" id="jyy-JO-gVi"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FpJ-Wl-LWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-82" y="-545"/>
+            <point key="canvasLocation" x="-57" y="-582"/>
         </scene>
         <!--Play StorybookVC-->
         <scene sceneID="feb-rZ-aSN">
@@ -66,55 +140,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="je7-ZX-ZAk">
-                                <rect key="frame" x="285" y="285" width="30" height="30"/>
-                                <state key="normal" title="Play"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="je7-ZX-ZAk">
+                                <rect key="frame" x="265" y="70" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="LvK-Tj-pyp"/>
+                                    <constraint firstAttribute="width" constant="70" id="cLb-qe-PcO"/>
+                                </constraints>
+                                <state key="normal" image="lightblueplaybutton"/>
                                 <connections>
                                     <action selector="playStorybookTapped:" destination="k7t-kW-fnp" eventType="touchUpInside" id="F6T-pW-qGw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yh-Es-LUN">
+                                <rect key="frame" x="265" y="480" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="T2z-vq-FuB"/>
+                                    <constraint firstAttribute="height" constant="70" id="qHy-6I-OZi"/>
+                                </constraints>
+                                <state key="normal" image="Stop1PressedBlue"/>
+                                <connections>
+                                    <action selector="stopStorybookTapped:" destination="k7t-kW-fnp" eventType="touchUpInside" id="LmM-xz-KhB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3yh-Es-LUN" secondAttribute="trailing" constant="245" id="4cT-sn-M03"/>
+                            <constraint firstItem="je7-ZX-ZAk" firstAttribute="centerX" secondItem="LHR-Du-xlp" secondAttribute="centerX" id="5f0-Mv-rQX"/>
+                            <constraint firstItem="BcL-Ch-5WR" firstAttribute="top" secondItem="3yh-Es-LUN" secondAttribute="bottom" constant="50" id="HjQ-dU-r05"/>
                             <constraint firstItem="je7-ZX-ZAk" firstAttribute="centerY" secondItem="LHR-Du-xlp" secondAttribute="centerY" id="IZk-Yh-SbL"/>
+                            <constraint firstItem="3yh-Es-LUN" firstAttribute="top" secondItem="je7-ZX-ZAk" secondAttribute="bottom" constant="61" id="UCk-zG-tr5"/>
+                            <constraint firstItem="je7-ZX-ZAk" firstAttribute="top" secondItem="V2I-mH-Oju" secondAttribute="bottom" constant="50" id="Y7p-jz-C7P"/>
+                            <constraint firstItem="3yh-Es-LUN" firstAttribute="centerX" secondItem="LHR-Du-xlp" secondAttribute="centerX" id="oGc-Ka-kDe"/>
                             <constraint firstItem="je7-ZX-ZAk" firstAttribute="centerX" secondItem="LHR-Du-xlp" secondAttribute="centerX" id="ub8-tf-CWI"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IZk-Yh-SbL"/>
+                                <exclude reference="ub8-tf-CWI"/>
+                                <exclude reference="UCk-zG-tr5"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1w2-k4-F18" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="572" y="-545"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="storybook" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gm-Bq-b2C">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="readStory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BNr-bs-DzT"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="3gm-Bq-b2C" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6rX-Do-SF4"/>
-                            <constraint firstItem="3gm-Bq-b2C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fYS-Jj-Okc"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="237" y="468"/>
+            <point key="canvasLocation" x="572" y="-582"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BigBlueMarble" width="154" height="150"/>
+        <image name="Goodnightmoon" width="755" height="648"/>
+        <image name="MoonGoddess" width="300" height="420"/>
+        <image name="MoonRhymes" width="1920" height="1080"/>
+        <image name="Stop1PressedBlue" width="256" height="256"/>
+        <image name="lightblueplaybutton" width="80" height="80"/>
+    </resources>
 </document>
