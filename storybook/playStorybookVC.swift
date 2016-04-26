@@ -9,22 +9,25 @@
 import UIKit
 import WatsonDeveloperCloud
 import AVFoundation
+import AVFoundation.AVPlayer
+
 
 class playStorybookVC: UIViewController {
-    var player: AVAudioPlayer?
+    
+    var player = AVAudioPlayer()
     var pickedStorybookTitle = String()
     var pickedStorybook = String()
     var parentPhonenumber = "9174034445"
+    var timeAudioPlayed: Double?
     
-    var timeAudioPlayed = player.currentTime / player.duration
-    var progress = float(timeAudioPlayed)
     
-    var textToPops = [String]
-    
+    var textToPops = [String]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        timeAudioPlayed = (player.currentTime / player.duration)
 
         // Do any additional setup after loading the view.
     }
@@ -51,9 +54,9 @@ class playStorybookVC: UIViewController {
                     //play the audio
                     self.player = try AVAudioPlayer(data: audio)
                     print(data)
-                    self.player!.prepareToPlay()
+                    self.player.prepareToPlay()
                     // audioPlayer.delegate = self
-                    self.player!.play()
+                    self.player.play()
                 } catch {
                     print("Couldn't create player")
                 }
@@ -66,20 +69,20 @@ class playStorybookVC: UIViewController {
 
 
     @IBAction func stopStorybookTapped(sender: AnyObject) {
-        self.player!.stop()
+        self.player.stop()
         sendPopsSMS()
     }
     
     func sendPopsSMS () {
         textToPops.append(pickedStorybookTitle)
-        textToPops.append(progress)
+        textToPops.append("boop")
         let code = arc4random_uniform(8999) + 1000
         var swiftRequest = SwiftRequest()
         
         var data = [
-            "To" : parentPhonenumber as String,
+            "To" : String(parentPhonenumber),
             "From" : "+18622256795",
-            "Body" : textToPops as String
+            "Body" : String(textToPops)
         ]
         swiftRequest.post("https://api.twilio.com/2010-04-01/Accounts/ACae8bf0bfc39454dd5f1621df862edb9c/Messages",
             auth: ["username" : "ACae8bf0bfc39454dd5f1621df862edb9c", "password" : "5931adb0f5d66f7dd2bb08af2642442a"],
